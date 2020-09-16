@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script data-require="jquery@*" data-semver="2.2.0" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link data-require="fontawesome@*" data-semver="4.5.0" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css" />
+    <title>Rate-A-💩</title>
+</head>
+
+<body>
+
+    <main>
+        <h1 id="title">Rate-A-Potty</h1>
+        <h2 id="description">Help us help you</h2>
+
+        <form id="survey-form" action="https://kloapp.herokuapp.com/add" method="POST">
+            <div>
+                <p>Pick your city:</p>
+                <select name="city" required>
+                    <option value="">Please pick a city</option> <!-- make sure people select the correct city before data is sent -->
+                    <option value="COL">Cologne</option>
+                    <option value="DUS">Weird city (Duss)</option>
+                    <option value="BON">Bonn</option>
+                </select>
+            </div>
+
+            <br> <!-- style with css -->
+            
+            <div>
+                <label>
+                    Street:
+                    <input type="text" required="text" name="street" minlength="3">
+                </label>
+                <label>
+                    Street Nr:
+                    <input type="text" required="number" name="streetnr">
+                </label>
+                <label>
+                    Potty-location:
+                    <input type="text" name="name">
+                </label>
+            </div>
+
+            <br> <!-- style with css -->
+
+            <h2>💩 features</h2>
+            <div> <!-- it's about the for attri! remove the fors ! -->
+                <label class="switch">
+                    <input type="checkbox" name="feat-mirror"> 
+                    mirror
+                    <span class="slider"></span>
+                </label>
+                <label class="switch">
+                    <input type="checkbox" name="feat-papertowels"> 
+                    towels
+                    <span class="slider"></span>
+                </label>
+                <label class="switch">
+                    <input type="checkbox" name="feat-perfume">
+                    perfume
+                    <span class="slider"></span>
+                </label>
+                <label class="switch">
+                    <input type="checkbox" name="feat-soap">
+                    soap
+                    <span class="slider"></span>
+                </label>
+                    <select name="stalls">
+                        <option value="1">One stall</option>
+                        <option value="2">Two stalls</option>
+                        <option value="3">Three stalls</option>
+                        <option value="4">Four stalls</option>
+                        <option value="5">Five stalls</option>
+                    </select>
+            </div>
+
+            <!-- add label -->
+            <textarea name="feat-access" id="survey-form"></textarea>
+
+            <br> <!-- style with css -->
+            <!-- add star css to replace radio buttons -->
+            <!-- pure css star rating input - use font awesome -->
+            <!-- or add some scale/ slider -->
+
+                <h2>Rate your 💩!</h2>
+                  <!-- hide the input -->  
+                  <input type="number" name="rating" id="rating-input"/>
+                  <div class="rating" role="optgroup">
+                    <!-- in Rails just use 1.upto(5) -->  
+                    <i class="fa fa-star-o fa-2x rating-star" id="rating-1" data-rating="1" tabindex="0" aria-label="Rate as one out of 5 stars" role="radio"></i>
+                    <i class="fa fa-star-o fa-2x rating-star" id="rating-2" data-rating="2" tabindex="0" aria-label="Rate as two out of 5 stars" role="radio"></i>
+                    <i class="fa fa-star-o fa-2x rating-star" id="rating-3" data-rating="3" tabindex="0" aria-label="Rate as three out of 5 stars" role="radio"></i>
+                    <i class="fa fa-star-o fa-2x rating-star" id="rating-4" data-rating="4" tabindex="0" aria-label="Rate as four out of 5 stars" role="radio"></i>
+                    <i class="fa fa-star-o fa-2x rating-star" id="rating-5" data-rating="5" tabindex="0" aria-label="Rate as five out of 5 stars" role="radio"></i>
+                  </div>        
+
+            <br> <!-- style with css -->
+
+            <input type="submit"> your responses</input>
+
+            <br> <!-- style with css -->
+            <br> <!-- style with css -->
+
+            <h3>Checkout some of our other work 👇</h3>
+            <button>
+                <a href="/table.html" target="blank" id="table-link">
+                    Look-up a 💩
+                </a>
+            </button>
+
+        </form>
+
+    </main>
+
+</body>
+
+</html>
+
